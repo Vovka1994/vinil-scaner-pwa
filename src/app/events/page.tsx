@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { Event } from '@/types';
 import AddModal from '@/components/ModalEventAdd';
 import EditModal from '@/components/ModalEventEdit'; 
+import InstallPrompt from '@/components/InstallPrompt';
 
 
 export default function EventsPage() {
@@ -183,6 +184,7 @@ export default function EventsPage() {
           onSubmit={handleEditEvent}
         />
       )}
+      <InstallPrompt />
     </div>
   ) : (
     <p>Loading...</p>
